@@ -13,6 +13,6 @@ jobs:
         run: |
         # your ML workflow goes here
           pip install -r requirements.txt
-          python MLP.ipynb
+          python MLP.py
         echo "MODEL METRICS"
         cat metrics.txt
