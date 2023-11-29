@@ -7,8 +7,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: iterative/setup-cml@v1
-      - name: Train model
+      - name: cml_run
+      env :
+       repo_Token : ${{ secrets.GITHUB_TOKEN }}
         run: |
         # your ML workflow goes here
           pip install -r requirements.txt
-          python train.py
+          python MLP.ipynb
+        echo "MODEL METRICS"
+        cat metrics.txt
