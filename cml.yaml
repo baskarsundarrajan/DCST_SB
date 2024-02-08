@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: iterative/setup-cml@v1
-      - name: Train model
+      - name: train model
         run: |
         # your ML workflow goes here
           pip install -r requirements.txt
